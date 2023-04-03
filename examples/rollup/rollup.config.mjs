@@ -15,6 +15,7 @@ const tsTransformer = () => ({
 })
 
 const config = {
+  cache: false,
   input: 'src/index.tsx',
   plugins: [
     nodeResolve({
@@ -57,7 +58,7 @@ if (!isProd) {
     })
   )
 } else {
-  config.plugins.push(terser())
+  // config.plugins.push(terser())
 }
 
 export default config
